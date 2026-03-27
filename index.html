@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Generador de Contraseñas Seguras</title>
+<title>Generador de Contraseñas</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,33 +14,39 @@
 
 <h1>🔐 Generador de Contraseñas</h1>
 
-<input type="text" id="password" readonly>
+<input type="text" id="password" placeholder="Tu contraseña..." readonly>
+
+<!-- BARRA DE SEGURIDAD -->
+<div class="seguridad">
+<div id="barra"></div>
+</div>
+
+<p id="nivel"></p>
 
 <div class="opciones">
 
-<label>
-<input type="checkbox" id="mayusculas" checked>
-Mayúsculas
-</label>
+<label><input type="checkbox" id="mayusculas" checked> Mayúsculas</label>
 
-<label>
-<input type="checkbox" id="numeros" checked>
-Números
-</label>
+<label><input type="checkbox" id="numeros" checked> Números</label>
 
-<label>
-<input type="checkbox" id="simbolos" checked>
-Símbolos
-</label>
+<label><input type="checkbox" id="simbolos" checked> Símbolos</label>
 
 </div>
 
+<div class="longitud">
+
 <label>Longitud:</label>
+
 <input type="number" id="longitud" value="12" min="6" max="30">
 
+</div>
+
 <div class="botones">
+
 <button onclick="generarPassword()">Generar</button>
+
 <button onclick="copiarPassword()">Copiar</button>
+
 </div>
 
 </div>
